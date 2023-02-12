@@ -22,3 +22,5 @@ This command is used to check the branches in our repository.
 This git command is used to switch from current branch to the specific branch.
 ## 11- git merge[branch name]
 This command is used to merge the specified branch's history to the current branch to maintain consistancy.
+
+# Important 
