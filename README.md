@@ -1,4 +1,4 @@
-#Important Git Commands
+# Important Git Commands
 Some Important and useful commands of Git.
 ##1- git config
 This git command is used to set the author's name and email adress, so that while doing commits over github, you will be identified respectively.
