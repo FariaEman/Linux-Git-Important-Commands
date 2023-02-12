@@ -23,4 +23,6 @@ This git command is used to switch from current branch to the specific branch.
 ## 11- git merge[branch name]
 This command is used to merge the specified branch's history to the current branch to maintain consistancy.
 
-# Important 
+# Important Linux Commands
+Some Important and useful commands of Linux.
+# 1- 
