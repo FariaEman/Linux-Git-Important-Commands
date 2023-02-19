@@ -1,7 +1,6 @@
-Creating a Linux virtual
-machine (VM) instance on Microsoft Azure using SSH keys and host files on HTTP server
-Steps:
-1. Register and create a VM instance
+# Creating a Linux virtual machine (VM) instance on Microsoft Azure using SSH keys and host files on HTTP server -->
+# Steps:
+# 1. Register and create a VM instance
 I. First of all open your account on Microsoft azure.
 
 II. Create a virtual machine instance on azure, while creating it select your desirable and required options.
@@ -10,7 +9,7 @@ In Basic information section, we choose Ubuntu and SSH options as we are creatin
 Public IP address of VM is 104.208.107.167
 After clicking the create option SSH key will be created and downloaded.
 
-2. Configure SSH keys for secure access to the VM
+# 2. Configure SSH keys for secure access to the VM
 Two ways to configure SSH keys:
 
 I. First one is while creating VM instance, You will have to enable the SSH option and disable password option. Also select the option “generate the pair of keys”.
@@ -20,7 +19,7 @@ II. If you don’t have pair of SSH key already, You can generate a new pair on 
 
 Now you have two keys public key and private key. public key will be saved in ~/.ssh/ folder by default. After that you will copy the content of the public key to the VM’s “authorized_keys” file using this command: ssh-copy-id USERNAME@VM-IP-ADDRESS
 Now to enforce key-based authentication you will have to disable the password authentication, for this you will open “sshd_config” file using command: sudo nano /etc/ssh/sshd_config , on the VM.
-3. Access the VM using SSH
+# 3. Access the VM using SSH
 After that, in connect section we will copy the following command:-
 
 Command: ssh -i “C:\Users\username\.ssh\SSH_KEY.pem” USERNAME@VM-IP-ADDRESS
@@ -31,7 +30,7 @@ In this way, through SSH key we will access VM.
 Command to your VM
 
 connect to VM using SSH key
-4. Add custom firewall rules in the subnet’s security list
+# 4. Add custom firewall rules in the subnet’s security list
 After configuring and accessing SSH keys, we will setup the custom firewall rules in the subnets security rules.
 
 I. Go to the networking section, here you can see Inbound and outbound port rules and then enter the “Effective Security Rules”, then click on the “Network Interface” to add the Inbound and outbound port rules.
@@ -41,7 +40,7 @@ II. Here we have added the inbound rule for RDP connection using service RDP and
 III. After adding them, save all these security rules.
 
 
-5. Install RDP on the VM and access it using RDP from your PC
+# 5. Install RDP on the VM and access it using RDP from your PC
 Download RDP on VM.
 
 I. By using command on the VM, we will download the RDP in our machine.
@@ -53,7 +52,7 @@ II. After downloading the RDP, we will set the username and password for the RDP
 III. Then go to the network interface to add inbound port rule for RDP.
 
 
-6. Host files using a simple HTTP server and access them using the public IP
+# 6. Host files using a simple HTTP server and access them using the public IP
 To host files on the web server, connect VM to RDP or SSH and then install Apache web server software using command: sudo apt-get install apache2
 
 
